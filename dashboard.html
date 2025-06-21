@@ -1,0 +1,185 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Paws & Care</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('https://wallpapercave.com/wp/wp9015357.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
+        .dashboard-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 700px;
+            width: 90%;
+            animation: slideFadeIn 1.2s ease-out forwards;
+            transform: translateY(30px);
+            opacity: 0;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            font-size: 2.2em;
+            animation: fadeIn 1.5s ease forwards;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease forwards;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            animation: fadeIn 2.5s ease forwards;
+        }
+
+        .stat {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 12px;
+            width: 30%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .stat:hover {
+            transform: scale(1.05);
+        }
+
+        .stat i {
+            font-size: 32px;
+            margin-bottom: 10px;
+            display: block;
+            animation: bounce 2s infinite;
+        }
+
+        .stat h3 {
+            margin: 5px 0;
+            font-size: 22px;
+            color: #FFD700;
+        }
+
+        .stat span {
+            font-size: 16px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: rgba(242, 159, 5, 0.9);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        a:hover {
+            background-color: rgba(201, 110, 5, 0.9);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        a::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            width: 200%;
+            height: 500%;
+            transition: transform 0.5s ease;
+            z-index: 0;
+        }
+
+        a:hover::after {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        @keyframes slideFadeIn {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Welcome to Paws & Care Foundation!</h1>
+        <p>You are now logged in to our animal rescue portal.</p>
+
+        <div class="stats">
+            <div class="stat">
+                <i class="fas fa-dog"></i>
+                <h3>150+</h3>
+                <span>Pets Rescued</span>
+            </div>
+            <div class="stat">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>90+</h3>
+                <span>Adoptions</span>
+            </div>
+            <div class="stat">
+                <i class="fas fa-users"></i>
+                <h3>200+</h3>
+                <span>Volunteers</span>
+            </div>
+        </div>
+
+        <a href="pawsrescue.html">Continue to Website</a>
+    </div>
+</body>
+</html>
